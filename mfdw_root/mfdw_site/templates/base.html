@@ -4,7 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untitled Document</title>
+  
+  <title>
+    {% block title %}
+      Untitle Document
+    {% endblock title %}    
+  </title>
+
   <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 </head>
 <body>
@@ -21,9 +27,11 @@
     <aside id="leftsidebar">
       <nav id="nav">
         <ul>
+          {% block sidenav %}
           <li>Menu 1</li>
           <li>Menu 2</li>
           <li>Menu 3</li>
+          {% endblock sidenav %}
         </ul>
       </nav>
     </aside>
